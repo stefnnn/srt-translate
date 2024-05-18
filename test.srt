@@ -1,0 +1,29 @@
+1
+00:01:27,811 --> 00:01:29,487
+Good morning.
+
+2
+00:01:32,193 --> 00:01:33,571
+How is life?
+
+3
+00:01:35,739 --> 00:01:37,409
+All good, all good.
+Thank you!
+
+4
+00:01:57,052 --> 00:01:59,220
+But ain't this a boring movie text?
+
+5
+00:02:01,389 --> 00:02:03,961
+It sure is, sure is.
+
+6
+00:02:04,685 --> 00:02:05,979
+But is it copyrighted?
+
+7
+00:02:06,917 --> 00:02:08,121
+<i>Not the least, bro!</i>
+
