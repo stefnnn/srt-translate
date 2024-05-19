@@ -25,10 +25,10 @@ client = openai.Client()
 
 def parse_args():
   parser = argparse.ArgumentParser(prog='srt_translate.py', description='Auto-Translate SRT subtitle files')
-  parser.add_argument('--input', '-i', type=str, help='Input SRT file', default="test.srt")
+  parser.add_argument('--input', '-i', type=str, help='Input SRT file', required=True)
   parser.add_argument('--output', '-o', type=str, help='Translated SRT file to write', default=None)
   parser.add_argument('--source', '-s', type=str, help='Source locale', default=SOURCE_LOCALE)
-  parser.add_argument('--target', '-t', type=str, help='Target locale', default=TARGET_LOCALE)
+  parser.add_argument('--target', '-t', type=str, help='Target locale', required=True)
   parser.add_argument('--batch_size', type=int, help='Batch size', default=BATCH_SIZE)
   parser.add_argument('--model', type=str, help='OpenAI model', default=GPT_MODEL)
   parser.add_argument('--movie', '-m', type=str, help='Movie name', default=MOVIE)
@@ -36,7 +36,7 @@ def parse_args():
   return parser.parse_args()
 
 def construct_prompt(args, text):
-  return f'Translate the following subtitle dialogue from the movie "{args.movie}" {args.specs}' + \
+  return f'Translate the following subtitle dialogue from the movie "{args.movie}" {args.specs} ' + \
     'from "{args.source}" to "{args.target}". Start always right away with the translation and keep ' + \
     'the dialogue separators with three stars:\n\n' + text
 
